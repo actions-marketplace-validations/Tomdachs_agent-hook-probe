@@ -25,7 +25,7 @@ jobs:
           - {os: macos-latest, python-version: '3.11'}
           - {os: macos-latest, python-version: '3.14'}
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
       - uses: astral-sh/setup-uv@v7
         with:
           version: '0.12.5'
@@ -39,7 +39,7 @@ jobs:
   package:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
       - uses: astral-sh/setup-uv@v7
         with:
           version: '0.12.5'
@@ -59,7 +59,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7.0.1
       - name: Unchanged snapshot passes
         id: unchanged
         uses: ./
